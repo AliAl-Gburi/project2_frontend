@@ -1,6 +1,6 @@
 <template>
-    <div class="card" style="width: 18rem;">
-  <img :src="getImage(item.imgsrc)" class="card-img-top" alt="...">
+    <div class="card my-card" style="width: 18rem;">
+  <img :src="getImage(item.imgsrc)" class="card-img-top my-card-img" alt="...">
   <div class="card-body">
     <h5 class="card-title">{{item.title}}</h5>
     <p class="card-text">{{item.desc}}</p>
@@ -27,3 +27,14 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+ .my-card {
+   margin-right: 50px;
+   margin-top: 50px;
+   margin-bottom: 50px;
+ }
+ .my-card-img {
+   margin-top: 10px;
+ }
+</style>

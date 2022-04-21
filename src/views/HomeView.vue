@@ -2,7 +2,9 @@
     <div>
         <HeaderImage />
         <div class="container">
+
           <div class="row">
+            <h2 class="my-h2">Popular Listings</h2>
             <Item v-for="product in allProducts"
             :key="product.id"
             :item="product" />
@@ -29,3 +31,10 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  .my-h2 {
+    margin: 30px;
+    text-align: left;
+  }
+</style>

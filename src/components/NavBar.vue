@@ -1,6 +1,7 @@
 <template>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light my-nav">
   <div class="container-fluid">
+    <img src="../assets/logo.png" class="my-logo" width="30px" alt="">
     <a class="navbar-brand" href="#">Karawei</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -16,11 +17,11 @@
       </ul>
        <ul class="nav navbar-nav">
         <router-link to="/" tag="li" v-if="!isAuthenticated" class="nav-item" active-class="active">
-          <a @click="onLoginClicked" class="nav-link">Login</a>
+          <a @click="onLoginClicked" class="nav-link my-login-b">Login</a>
         </router-link>
         <li v-if="isAuthenticated" class="li-pointer nav-item">
           <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" role="button" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button class="btn btn-secondary dropdown-toggle my-user-btn" type="button" role="button" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               {{ getUserName() }}
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -61,3 +62,15 @@ export default {
    
 }
 </script>
+
+<style scoped>
+  .my-nav {
+    background-color: rgb(255, 241, 0);
+  }
+  .my-logo {
+    margin-right: 20px;
+  }
+  .my-login-b, .my-user-btn {
+    margin-right: 100px;
+  }
+</style>
