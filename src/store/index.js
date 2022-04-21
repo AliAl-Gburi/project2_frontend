@@ -9,7 +9,7 @@ const headers = {Accept: "application/json"};
 export default new Vuex.Store({
     state: {
         allProducts: [],
-        users: {
+        user: {
             isAuthenticated: false,
             name: "",
             email: "",

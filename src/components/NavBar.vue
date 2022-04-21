@@ -28,9 +28,22 @@
           <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
         </li>
       </ul>
-      <form class="d-flex">
-        <button class="btn btn-outline-success" type="submit">Log in</button>
-      </form>
+       <ul class="nav navbar-nav">
+        <router-link to="/" tag="li" v-if="!isAuthenticated" class="nav-item" active-class="active">
+          <a @click="onLoginClicked" class="nav-link">Login</a>
+        </router-link>
+        <li v-if="isAuthenticated" class="li-pointer nav-item">
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              {{ getUserName() }}
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Account Settings</a>
+              <a @click="onLogoutClicked" class="dropdown-item">Logout {{ userEmail }}</a>
+            </div>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
 </nav>
@@ -38,7 +51,27 @@
 
 <script>
 export default {
-    name: 'NavBar'
+    name: 'NavBar',
+    computed: {
+    userEmail() {
+      return this.isLoggedIn ? this.currentUser.email : ''
+    },
+    isAuthenticated() {
+      return this.$store.state.user.isAuthenticated;
+    },
+  },
+  methods: {
+    onLoginClicked() {
+      window.location = "http://localhost:3000/login";
+    },
+    onLogoutClicked() {
+      this.$store.commit("logout");
+    },
+    getUserName() {
+      return this.$store.state.user.name;
+    }
+  }
+
    
 }
 </script>

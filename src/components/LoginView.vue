@@ -21,6 +21,7 @@ export default {
         }
 
         if(name && email && idToken && name != '' && email != '' && idToken != '') {
+            console.log(name + " cd")
             this.$store.commit("login", payload);
         } else {
             this.$store.commit("logout");
@@ -28,6 +29,6 @@ export default {
 
         this.$router.push("/");
     }
-}
+};
 
 </script>

@@ -14,7 +14,6 @@ export default {
   const parallax = document.getElementById("parallax");
 window.addEventListener("scroll", function() {
     let offset = this.window.pageYOffset;
-    console.log(offset)
     parallax.style.backgroundPositionY = (offset * 0.7)-50 + "px";
 })
 }
