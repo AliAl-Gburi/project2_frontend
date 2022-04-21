@@ -10,7 +10,7 @@ body{
     max-width: 100vw;
     overflow-x: hidden;
     transition: background 0.2s linear;
-    background-image: url(/img/city3_gif.gif);
+    background-image: url(/design/img/city3_gif.gif);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -69,33 +69,10 @@ header{
 	color: #f39c12;
 }
 body.dark {
-	background-image: url(/img/city_gif.gif);
+	background-image: url(/design/img/city_gif.gif);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-}
-body.dark p{
-    color: white;
-}
-body.dark h1{
-    color: white;
-    text-shadow: 3px 3px #AC83DE;
-}
-body.dark h2{
-    color: white;
-}
-body.dark h3{
-    color: white;
-    text-shadow: 3px 3px #AC83DE;
-}
-body.dark legend{
-    color: white;
-}
-body.dark label{
-    color: white;
-}
-body.dark .box-3{
-    background-color: #AC83DE;
 }
 .checkbox {
 	opacity: 0;
@@ -169,37 +146,6 @@ p {
     padding-bottom: 2rem;
     margin-bottom: 3rem;
 }
-
-/* Rating */
-textarea {
-    width: 100%;
-    margin-bottom: 0;
-    padding-bottom: 0;
-    font-size: 1.3rem;
-}
-button{
-    padding: 0.3rem;
-    margin-bottom: 1rem;
-    margin-top: 0;
-    font-size: 1rem;
-}
-legend{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: black;
-    font-size: 1.3rem;
-}
-fieldset {
-    margin-top: 5rem;
-    font-size: 1.3rem;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-}
-::placeholder{
-    font-family: futura-pt, sans-serif;
-    font-size: 1rem;
-}
-
 /* Footer */
 footer{
     background-color: #C4C3C3;
