@@ -1,0 +1,255 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+img {
+    max-width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;}
+body{
+    font-family: futura-pt, sans-serif;
+    max-width: 100vw;
+    overflow-x: hidden;
+    transition: background 0.2s linear;
+    background-image: url(/img/city3_gif.gif);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Header */
+header{
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 5rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+.logos{
+    width: 55px;
+}
+
+/* Dark mode */
+.label {
+	background-color: white;
+	border-radius: 50px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px;
+	position: relative;
+	height: 26px;
+	width: 50px;
+	transform: scale(1.5);
+}
+.label .ball {
+	background-color: black;
+	border-radius: 50%;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	height: 22px;
+	width: 22px;
+	transform: translateX(0px);
+	transition: transform 0.2s linear;
+}
+.checkbox:checked + .label .ball {
+	transform: translateX(24px);
+}
+.fa-moon {
+	color: #f1c40f;
+}
+.fa-sun {
+	color: #f39c12;
+}
+body.dark {
+	background-image: url(/img/city_gif.gif);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+body.dark p{
+    color: white;
+}
+body.dark h1{
+    color: white;
+    text-shadow: 3px 3px #AC83DE;
+}
+body.dark h2{
+    color: white;
+}
+body.dark h3{
+    color: white;
+    text-shadow: 3px 3px #AC83DE;
+}
+body.dark legend{
+    color: white;
+}
+body.dark label{
+    color: white;
+}
+body.dark .box-3{
+    background-color: #AC83DE;
+}
+.checkbox {
+	opacity: 0;
+	position: absolute;
+}
+
+/* Main */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+h1 {
+    font-size: 2.3rem;
+    padding-top: 2rem;
+    color: black;
+    text-shadow: 3px 3px #04d9ff;
+}
+h2 {
+    color: black;
+    font-size: 1rem;
+    font-weight: 500;
+}
+h3 {
+    font-size: 1.3rem;
+    color: black;
+    padding-bottom: 1rem;
+    text-shadow: 3px 3px #04d9ff;
+}
+h4 {
+    font-size: 1rem;
+    color: black;
+    font-weight: 350;
+    padding-bottom: 1rem;
+}
+h5 {
+    color: black;
+    font-size: 1rem;
+    font-weight: 100;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+p {
+    color: black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 740px;
+    font-size: 1.3rem;
+}
+.img{
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+/* Prep box */
+.box-3{
+    background-color: #04d9ff;
+    max-width: 740px;
+    padding:1rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-gap: 10px;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* Rating */
+textarea {
+    width: 100%;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-size: 1.3rem;
+}
+button{
+    padding: 0.3rem;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    font-size: 1rem;
+}
+legend{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    font-size: 1.3rem;
+}
+fieldset {
+    margin-top: 5rem;
+    font-size: 1.3rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+::placeholder{
+    font-family: futura-pt, sans-serif;
+    font-size: 1rem;
+}
+
+/* Footer */
+footer{
+    background-color: #C4C3C3;
+    padding: 20px;
+}
+.column {
+    float: left;
+    width: 50%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.row::after {
+    content: "";
+    clear: both;
+}
+hr{
+    height: 0.2rem;
+    background-color: #707070;
+}
+.flex {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+
+/* Media queries */
+.box-3{
+    width: 100%;
+}
+
+@media screen and (min-width: 780px){
+    body{
+        background-color: white;
+        font-family: futura-pt, sans-serif;
+        max-width: 100vw;
+        overflow-x: hidden;
+    }
+.wrapper{
+    width: 1024px;
+    margin: 0 auto;
+}
+
+    .box-3{
+        width: 75%;
+        margin: 0 50px 7rem 50px;
+    }
+    main{
+        max-width: 100%;
+    }
+}
+
+
