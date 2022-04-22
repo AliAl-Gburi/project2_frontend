@@ -9,11 +9,15 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <router-link class="nav-link active" to="/">Home</router-link>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Listings</a>
+          <router-link class="nav-link" to="/nearby-taskers">Nearby Taskers</router-link>
         </li>
+        <li class="nav-item">
+          <router-link class="nav-link" to="/add">Create Listing</router-link>
+        </li>
+        
       </ul>
        <ul class="nav navbar-nav">
         <router-link to="/" tag="li" v-if="!isAuthenticated" class="nav-item" active-class="active">

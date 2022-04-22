@@ -1,14 +1,18 @@
 <template>
 <div id="app">
-  <NavBar />
-  <router-view />
+  <div><NavBar />
+  <HeaderImage /></div>
+   <router-view/>
   
+  
+  <div><FooterComponent /></div>
 </div>
 </template>
 
 <script>
 import NavBar from './components/NavBar.vue'
-
+import HeaderImage from './components/HeaderImage.vue'
+import FooterComponent from './components/FooterComponent.vue'
 
 
 
@@ -20,7 +24,9 @@ export default {
   name: 'App',
   components: {
     
-    NavBar
+    NavBar,
+    FooterComponent,
+    HeaderImage
    
   },
   mounted(){
@@ -36,8 +42,8 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  height: 2000px;
+  color: #2c3e50
+  
   
 }
 </style>

@@ -1,10 +1,10 @@
 <template>
     <div>
-        <HeaderImage />
+        
         <div class="container">
 
           <div class="row">
-            <h2 class="my-h2">Popular Listings</h2>
+            <h2 class="my-h2">Popular Listings In Your Area</h2>
             <Item v-for="product in allProducts"
             :key="product.id"
             :item="product" />
@@ -15,13 +15,11 @@
 </template>
 
 <script>
-import HeaderImage from '../components/HeaderImage.vue'
 import Item from '../components/CardItem.vue'
 
 export default {
     name: 'HomeView',
   components: {
-    HeaderImage,
     Item
   },
   computed: {
@@ -36,5 +34,15 @@ export default {
   .my-h2 {
     margin: 30px;
     text-align: left;
+    color: #f1c40f;
+    text-shadow: 3px 3px #780174;
+  }
+  .row {
+    width: 100%;
+  }
+  .container {
+    width: 95%;
+    
+    max-width: 1400px;
   }
 </style>
